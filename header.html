@@ -5,10 +5,196 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        #messege{
+            width: 100%;
+            height: 25px;
+            border: 2px solid #d26e9c;
+            padding-top: 5px;
+            padding-left: 2px;
+            border-radius: 5px;
+            background-color: #fbf2f5;
+        }
+        #container{
+            display: flex;
+            width: 90%;
+            margin:auto;
+            margin-top: 5px;
+        }
+        #container>img{
+            cursor: pointer;
+        }
+        #box1{
+            width:65%;
+            margin-left: 5%;
+        }
+        #box1>div:nth-child(1){
+            display: flex;
+            height: 20px;
+            width: 90%;
+            margin-left: 20px;
+        }
+        #box1>div>img{
+            width: 5%;
+            height: 35px;
+            cursor: pointer;
+            
+            
+        }
+        .box1-opt{
+            margin-left: 22px;
+            padding-right: 17px;
+            border-right: 1px solid lightgray;
+            cursor: pointer;
+            
+        }
+        #header-select,input{
+            border: 0px;
+            width: 100px;
+            cursor: pointer;
+            
+        }
+        #header-select{
+            width: 80px;
+            cursor: pointer;
+            
+
+        }
+        #selectDiv{
+            display: flex;
+            margin-left: 15px;
+        }
+        #box1>div:nth-child(2){
+            display: flex;
+            width: 100%;
+            height: 40px;
+            margin-top: 7px;
+        }
+        #box1>div>.search-bar{
+            width: 96%;
+            height: 30px;
+            border: 1px solid gray;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;   
+            font-size: 20px;
+            margin-left: 0px;
+            border-right: none;
+            text-align: center;
+            cursor:text;
+        }
+        .enter-pin{
+            border: 1px solid lightgray;
+            margin-left: 10px;
+        }
+        #box2{
+            width: 10%;
+            height: 85px;
+        }
+        .box2-div1{
+            display: flex;
+            margin-left: 15px;
+        }
+        .header-login{
+            margin-top: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+        }
+        .header-login:hover{
+            text-decoration: underline;
+        }
+        .box2-div1>.line{
+            margin-top: 5px;
+        }
+        .header-register{
+            margin-top: 5px;
+            padding-left: 5px;
+            cursor: pointer;
+        }
+        .header-register:hover{
+            text-decoration: underline;
+        }
+        .header-login-img{
+            display: flex;
+
+        }
+        .header-starImg{
+            margin-top: 10px;
+            margin-left: 19px;
+            font-size: 26px;
+            color:#84bb3a ;
+            cursor: pointer;
+        }
+        .header-cartImg{
+            margin-top: 10px;
+            margin-left: 11px;
+            padding-left: 13px;
+            font-size: 26px;
+            border-left: 1px solid gray;
+            color:#84bb3a ;
+            cursor: pointer;
+            
+        }
+       
+       
+        
+    </style>
 </head>
 <body>
+    <div id="messege">Now accepting Wine & Beer orders (Select stores, Mumbai Only). Delivery timings 10.00 AM to 8:00 PM subject to verification of permit and age by delivery person. Age criteria 21+ for mild beer and 25+ for strong beer and wine.</div>
     <div id="container">
-        <div></div>
+        <img src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2"/>
+        <div id="box1">
+            <div>
+                <div class="box1-opt">Online Slots Availability</div>
+                <div class="box1-opt">Fresh & Fast</div>
+                <div class="box1-opt">Store Locator</div>
+                <div class="box1-opt">Contact Us</div>
+                <div id = "selectDiv">
+                    <i class="fas fa-map-marker-alt" style="font-size: 13px; margin-top: 4px;color: green;"></i>
+                    <select id="header-select">
+                        <option value="ajeetgarh">Ajeetgarh</option>
+                        <option value="ajnala">Ajnala</option>
+                        <option value="akaltara">Akaltara</option>
+                        <option value="akhnoor">Akhnoor</option>
+                        <option value="allagadda">Allagadda</option>
+                        <option value="amarpur">Amarpur</option>
+                        <option value="ankleshwar">Ankleshwar</option>
+                        <option value="annur">Annur</option>
+                        <option value="bachwara">Bachwara</option>
+                        <option value="badnawar">Badnawar</option>
+                        <option value="chalisgon">Chalisgon</option>
+                        <option value="chalsa">Chalsa</option>
+                        <option value="champa">Champa</option>
+                        <option value="dalli rajhara">Dalli rajhara</option>
+                        <option value="damoh">Amoh</option>
+                        <option value="deogarh">Deogarh</option>
+                        <option value="ekma">Ekma</option>
+                        <option value="gaxhipur">Gaxhipur</option>
+                        <option value="gohana">Gohana</option>
+                        <option value="ahiri">Ahiri</option>
+                        <option value="akole">Akole</option>
+                    </select>
+                    
+                </div>
+                    <div class="enter-pin"><i class="fas fa-pen" style="font-size: 13px;color: green;"></i><input type="text" placeholder="Enter Pin Code" id="pincode" /></div>
+            </div>
+            <div>
+                <input type = "text" placeholder = "start searching..." class="search-bar">
+                <img src="https://www.naturesbasket.co.in/Images/search-button.jpg"/>
+            </div>
+        </div>
+        <div id="box2">
+            <div class="box2-div1">
+                <div class="header-login">Login</div>
+                <div class="line">|</div>
+                <div class="header-register">Register</div>
+            </div>
+            <div class="header-login-img">
+                <div class="header-starImg"><i class="fas fa-star"></i></div>
+                <div class="header-cartImg"><i class="fas fa-cart-plus"></i></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
