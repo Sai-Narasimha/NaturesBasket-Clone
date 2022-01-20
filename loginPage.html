@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #log-cont{
+        border: 5px solid #dc827e;
+          margin: auto;
+          margin-top: 150px;
+          width:45%;
+          height: 450px;
+          background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb4Zi-WolinVOzJ2NGXgXd-UQpBpi_yEmsEw&usqp=CAU");
+      }
+      #log-cont>img{
+          margin-left: 28.5% ;
+          margin-top: 40px;
+          border: 2px solid #dc827e;
+      }
+      #in-cont{
+         margin:auto;
+         margin-top: 50px;
+          width: 40%;
+         
+      }
+      .login-feilds{
+          height: 35px;
+          width: 96%;
+          text-align: center;
+          font-size: 20px;
+      }
+      #login{
+          margin-left: 90px;
+          cursor: pointer;
+          width: 100px;
+          height: 25px;
+          font-size: 18px;
+      }
+      #login:hover{
+          background-color: #dc827e;
+          color: white;
+      }
+      span{
+          text-decoration: underline;
+          cursor: pointer;
+      }
+      span:hover{ 
+          color:white;
+          background-color: #dc827e;
+      }
+      p{
+        padding-top: 10px;
+        
+      }
+    </style>
+</head>
+<body>
+    <div id="log-cont">
+        <img src = "https://www.naturesbasket.co.in/Images/logosnew.png?v=2"/>
+        <div id = in-cont>
+            <input type="email" placeholder="Mobile OR Email" id = "mobEmail" class="login-feilds"> 
+            <br><br>
+            <input type="password" placeholder="Enter Password" id = "password" class = "login-feilds">
+            <br><br>
+            <button id="login">LOG IN</button>
+        </div>
+        <p  style="text-align: center;font-family:Arial, Helvetica, sans-serif;letter-spacing: 1px;">IF YOU DON'T HAVE AN ACCOUNT PLEASE <span onclick="gotoRegister()">REGISTER</span></p>
+    </div>
+</body>
+</html>
+<script>
+document.querySelector("#login").addEventListener("click",logging)
+function logging(){
+var detail = JSON.parse(localStorage.getItem("register"))
+var emailMob = document.querySelector("#mobEmail").value;
+var passWord = document.querySelector("#password").value;
+for(i = 0; i < detail.length; i++)
+{
+  if((detail[i].Mail || detail[i].mobNum == emailMob)  && (detail[i].password == passWord))
+  {
+    localStorage.setItem("currentUser",JSON.stringify(detail[i]))
+    var bag = "detail";
+  }
+ 
+}
+if(bag == "detail")
+{
+  window.location.href = "head.html"
+}
+else
+{
+  alert("incorrect")
+}
+}
+function gotoRegister(){
+    window.location.href="register.html"
+}
+</script>

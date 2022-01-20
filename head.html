@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        #main-head{
+            background-color: white;
+            width: 100%;
+            height: auto;
+            position: fixed;
+        }
+        #messege{
+            width: 99%;
+            height: 25px;
+            border: 2px solid #d26e9c;
+            top:0;
+            left: 1;
+            padding-top: 2px;
+            border-radius: 5px;
+            background-color: #fbf2f5;
+            position: fixed;
+        }
+        #container{
+            display: flex;
+            width: 90%;
+            height: 100px;
+            margin:auto; 
+            margin-top: 50px;
+            background-color:lightpink;
+          
+        }
+        .box1{
+            width:62%;
+            margin-left: 5%;
+            background-color: lightblue;
+        }
+        .box1>.box1-div1{
+            display: flex;
+            height: 20px;
+            width: 85%;
+            margin-left: 20px;
+            margin-top: 5px;
+            background-color: gray;
+        }
+        .box1-div1>.options{
+            margin-left: 22px;
+            padding-right: 15px;
+            padding-top: 4px;
+            border-right: 1px solid black;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: Poppins, sans-serif;
+           
+        }
+        #selectDiv{
+            margin-left: 15px;
+        }
+        #header-select{
+            width: 80px;
+            border: 0px;
+            cursor: pointer;
+            text-align: left;
+            font-family: CeraPRO-Regular;
+            font-size: 14px;
+        }
+        .enter-pin{
+            
+            margin-left: 15px;
+            border: 1px solid rgb(110, 98, 98);
+        }
+        .enter-pin>input{
+            width: 100px;
+            border:0px
+        }
+        .box1-div2{
+            display: flex;
+        }
+        #search-div{
+            width:100%;
+            background-color: lightgray;
+            margin-top: 5px;
+
+        }
+        .header-searchBar{
+            width:100%;
+            height:30px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+            border: 1px solid gray;
+            border-right: 0px;
+            
+            
+        }
+        .box1-div2>img{
+            height: 35px;
+            margin-top: 5px;
+        }
+        #header-trendSearches{
+            width: 100%;
+            margin-left: 0px;
+            border: green 1px solid;
+           display: none;
+        }
+        #search-div:hover #header-trendSearches{
+            display: block;
+            background-color:white;
+            text-align: center;
+            line-height: 25px;
+            font-family:Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            font-size: 19.72px;
+        }
+        .box2-div1{
+            display: flex;
+            margin-left: 15px;
+        }
+        .header-login{
+            margin-top: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+        }
+        .header-login:hover{
+            text-decoration: underline;
+        }
+        .box2-div1>.line{
+            margin-top: 5px;
+        }
+        .header-register{
+            margin-top: 5px;
+            padding-left: 5px;
+            cursor: pointer;
+        }
+        .header-register:hover{
+            text-decoration: underline;
+        }
+        .header-login-img{
+            display: flex;
+
+        }
+        .header-starImg{
+            margin-top: 10px;
+            margin-left: 19px;
+            font-size: 26px;
+            color:#84bb3a ;
+            cursor: pointer;
+        }
+        .header-cartImg{
+            margin-top: 10px;
+            margin-left: 11px;
+            padding-left: 13px;
+            font-size: 26px;
+            border-left: 1px solid gray;
+            color:#84bb3a ;
+            cursor: pointer;
+            
+        }
+        #header-loginPage{
+            display: flex;
+            margin-top: 25px;
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+        }
+        #header-loginPage>img{
+            margin-left: 77%;
+            width: 20px;
+            height:20px
+            
+        }
+        #header-registerPage{
+            display: none;
+        }
+        .inputs{
+            margin: auto;
+            margin-left: 50px;
+            width: 200px;       
+        }
+        #mail{
+            margin-left: 25%;
+        }
+        .logs{
+            height: 25px;
+            font-family:"CeraPRO-Regular";
+        }
+        .nav-div{
+            background-color: brown;
+            height:auto;
+        }
+        .nav-bar{
+            display: flex;
+            width: 90%;
+            height:30px;
+            background-color: yellow;
+            margin: auto;
+        }
+        
+        #shop-by-category{
+            width: 250px;
+            font-size: 20px;
+            padding: 5px;
+            letter-spacing: 2px;
+            color:rgb(216, 98, 138);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            background-color: lightgray;
+            cursor: pointer;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        #drop-down{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: none;
+        }
+        .abc:hover #drop-down{
+            display: block;
+        }
+        .list-of-items{
+            padding: 2px 10px;
+            margin-top: 7px;
+            font-family:'Source Sans Pro', sans-serif;
+            font-size: 19px;
+            border-bottom: 1px solid lightgray;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .list-of-items:hover{
+            background-color: #84bb3a;
+            color: white;
+            font-weight: 400;
+        }
+        .nav-options{
+            margin-left: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 17px;
+            margin-top: 6px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+
+        }
+        .nav-options:hover{
+            background-color: #d3d3d3;
+            border-bottom:3px solid #84bb3a ;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-head">
+        <div id="messege">Now accepting Wine & Beer orders (Select stores, Mumbai Only). Delivery timings 10.00 AM to 8:00 PM subject to verification of permit and age by delivery person. Age criteria 21+ for mild beer and 25+ for strong beer and wine.</div>
+        <div id="container">
+            <img src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2"/>
+            <div class="box1">
+                <div class="box1-div1">
+                    <div class="options">Online Slots Availability</div>
+                    <div class="options">Fresh & Fast</div>
+                    <div class="options">Store Locator</div>
+                    <div class="options">Contact Us</div>
+                    <div id = "selectDiv">
+                        <i class="fas fa-map-marker-alt" style="font-size: 13px; margin-top: 4px;color: green;"></i>
+                        <select id="header-select">
+                            <option value="ajeetgarh">Ajeetgarh</option>
+                            <option value="ajnala">Ajnala</option>
+                            <option value="akaltara">Akaltara</option>
+                            <option value="akhnoor">Akhnoor</option>
+                            <option value="allagadda">Allagadda</option>
+                            <option value="amarpur">Amarpur</option>
+                            <option value="ankleshwar">Ankleshwar</option>
+                            <option value="annur">Annur</option>
+                            <option value="bachwara">Bachwara</option>
+                            <option value="badnawar">Badnawar</option>
+                            <option value="chalisgon">Chalisgon</option>
+                            <option value="chalsa">Chalsa</option>
+                            <option value="champa">Champa</option>
+                            <option value="dalli rajhara">Dalli rajhara</option>
+                            <option value="damoh">Amoh</option>
+                            <option value="deogarh">Deogarh</option>
+                            <option value="ekma">Ekma</option>
+                            <option value="gaxhipur">Gaxhipur</option>
+                            <option value="gohana">Gohana</option>
+                            <option value="ahiri">Ahiri</option>
+                            <option value="akole">Akole</option>
+                        </select>
+                    </div>
+                    <div class="enter-pin"><i class="fas fa-pen" style="font-size: 13px;color: green;"></i><input type="text" placeholder="Enter Pin Code" id="pincode" /></div>
+
+                </div>
+                <div class="box1-div2">
+                    <div id="search-div">
+                        <input type="text" placeholder="stat searching..." class = "header-searchBar">
+                        <div id="header-trendSearches" class = "list" >
+                            <h3 style="padding-left: 3%;"> Trending Searches</h3>
+                            <ul style="list-style-type: none;">
+                                <li>Organic</li>
+                                <li>Fresh Artisinial Breads</li>
+                                <li>Cold cuts & Seafood</li>
+                                <li>Diabetic Friendly Foods</li>
+                                <li>L'Exclusif</li>
+                                <li>Healthy Alternatives</li>
+                                <li>Birthdays & Anniversary Gift Hampers</li>
+                                <li>Platters & Dips</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src = "https://www.naturesbasket.co.in/Images/search-button.jpg"/>
+                </div>
+            </div>
+            <div id="box2">
+                <div class="box2-div1">
+                    <div class = "header-login" onclick = "gotoLogin()">Login</div>
+                    <div class="line">|</div>
+                    <div class="header-register"onclick = "gotoRegister()">Register</div>
+                </div>
+                <div class="header-login-img">
+                    <div class="header-starImg"><i class="fas fa-star"></i></div>
+                    <div class="header-cartImg"><i class="fas fa-cart-plus"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-div">
+            <div class="nav-bar">
+                <div class = "nav-shop-menu">
+                    <div class="abc">
+                        <div style="display: flex;"><div id="shop-by-category">SHOP BY CATEGORY <i class="fas fa-sort-down" style="position: absolute;top:84%;padding-left: 5px;"></i></div></div>
+                        
+                        <div id="drop-down">
+                            <div class="list-of-items">Gift Hampers</div>
+                            <div class="list-of-items">Fruits & Vegitables</div>
+                            <div class="list-of-items">Health</div>
+                            <div class="list-of-items">Indian Grocery</div>
+                            <div class="list-of-items">Snack Bar</div>
+                            <div class="list-of-items">Breakfast,Dairy & Bakery</div>
+                            <div class="list-of-items">Instant Meals & Aids</div>
+                            <div class="list-of-items">The Good Food Cafe</div>
+                            <div class="list-of-items">Wine & Beer</div>
+                            <div class="list-of-items">Packin Material</div>
+                        </div>  
+                    </div>                  
+                </div>
+                    <div class="nav-options">PAST PURCHASES</div>
+                    <div class="nav-options">GIFTING</div>
+                    <div class="nav-options">REWARDS</div>
+                    <div class="nav-options">BLOG</div>
+                    <div class="nav-options">OFFERS</div>
+                    <div class="nav-options">CONNOISSEUR'S SELECTION</div>
+                    <div class="nav-options">BOOK STORE VISIT</div>
+               
+               
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+   function gotoLogin(){
+       window.location.href= "loginPage.html"
+   }
+   function gotoRegister(){
+       window.location.href= "register.html"
+   }
+</script>
