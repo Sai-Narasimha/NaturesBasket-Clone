@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #toCart{
+            display: flex;
+        } */
+        #content{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "toCart">
+    <div  id = "image_div">
+        <img id = "clicked_img" alt="">
+    </div>
+    <div id = "content">
+        <p id = "prodName"></p>
+        <p id = "prodQty"></p>
+        <p id = "prodPrice"></p>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    function clicked()
+    {
+        var clickedOne = JSON.parse(localStorage.getItem("clicked_item"))
+        console.log(clickedOne)
+
+        var image= document.getElementById("clicked_img")
+        image.src = clickedOne.img;
+
+        var name = document.getElementById("prodName")
+        name.textContent= clickedOne.name
+
+        var price = document.getElementById("prodPrice")
+        price.textContent=   `Price: Rs. ${clickedOne.price}`
+
+        var qty = document.getElementById("prodQty")
+        qty.textContent = `Qty: ${clickedOne.qty}`
+
+
+    }
+    clicked();
+</script>

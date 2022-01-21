@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="head.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        #cart_head_img{
+            width: 90%;
+            height: 230px;
+            border: 1px solid red;
+            margin: auto;
+            margin-top: 20px;
+            /* background-image: url("https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png");
+            background-size: cover;
+            background-repeat: no-repeat; */
+        }
+        #cart_head_img>img{
+            width: 100%;
+            height: 100%;
+        }
+        #cart_filters{
+            width: 20%;
+            margin-top: 20px;
+            margin-left: 30%;
+            background-color: red;
+        }
+        #cart_filters>select{
+            width: 49%;
+            height: 25px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            
+        }
+    </style>
 </head>
 <body>
     <div id="main-head">
@@ -84,7 +114,7 @@
             <div class="nav-bar">
                 <div class = "nav-shop-menu">
                     <div class="abc">
-                        <div style="display: flex;"><div id="shop-by-category">SHOP BY CATEGORY <i class="fas fa-sort-down" style="position: absolute;top:84%;padding-left: 5px;"></i></div></div>
+                        <div style="display: flex;"><div id="shop-by-category">SHOP BY CATEGORY </div></div>
                         
                         <div id="drop-down">
                             <div class="list-of-items">Gift Hampers</div>
@@ -100,6 +130,7 @@
                         </div>  
                     </div>                  
                 </div>
+
                 <div class="nav-options" onclick="gotoFruits()">FRUITS VEGETABLES</div>
                 <div class="nav-options" onclick="gotoGrocery()">INDIAN GROCERY</div>
                 <div class="nav-options">HEALTH</div>
@@ -107,20 +138,39 @@
                 <div class="nav-options">WINE BEER</div>
                 <div class="nav-options">DELICIOUS</div>
                 <div class="nav-options">GIFT HAMPERS</div>
-           
-               
-               
+ 
             </div>
         </div>
     </div>
-    
+    <div id="cart_head_img">
+        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png"/>
+        <div id="cart_filters">
+            <select>
+                <option value="name">Filter by Name</option>
+                <option value="AtoZ" onClick = "fromAtoZ()">Filter A to Z</option>
+                <option value="ZtoA" onClick = "fromZtoA()">Filter Z to A</option>
+            </select>
+            <select>
+                <option value="price">Filter by Price</option>
+                <option value="low" onClick = "lowToHigh()">Low to High</option>
+                <option value="high" onClick = "highToLow()">High to low</option>
+            </select>
+        </div>
+
+    </div>
 </body>
 </html>
 <script>
-   function gotoLogin(){
-       window.location.href= "loginPage.html"
-   }
-   function gotoRegister(){
-       window.location.href= "register.html"
-   }
+    function fromAtoZ(){
+        console.log("am from a to z")
+    }
+    function fromZtoA(){
+        console.log("am from z to a")
+    }
+    function lowToHigh(){
+        console.log("am from low to high")
+    }
+    function highToLow(){
+        console.log("am from high to low")
+    }
 </script>

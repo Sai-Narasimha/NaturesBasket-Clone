@@ -1,0 +1,30 @@
+#footer_cont{
+    width:90%;
+    margin:auto;
+    margin-top: 90px;
+}
+.social_media_logos>i:hover{
+    cursor: pointer;
+}
+.footer_items_info{
+    display: flex;
+    margin-top: 10px;
+    height: 600px;
+    
+}
+.footer_items_info>.info{
+    margin-left: 3.5%;
+    line-height:24px;
+}
+.info>div>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  
+}
+.info>div>ul{
+    list-style: none;
+    padding:0px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+}

@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="head.css">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #del_details{
+            margin: auto;
+            margin-top: 50px;
+            width: 40%;
+            /* height: 200px; */
+            border: 1px solid red;
+        }
+        td{
+            padding-top: 15px;
+            
+            
+        }
+        td>input{
+            height: 30px;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
     <div id="main-head">
@@ -113,14 +133,64 @@
             </div>
         </div>
     </div>
-    
+    <div id="del_details">
+        <h3 style="font-family: Arial, Helvetica, sans-serif;font-weight: 400;">Enter Shipping Address</h3>
+        <table>
+            <tr>
+                <td>First Name<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Last Name<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address <span>*</span></td>
+                <td><textarea name="" id="" cols="21" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Landmark<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Pincode<span>*</span></td>
+                <td>
+                    <select style="width: 200px;height: 40px;">
+                        <option value="ajeetgarh">Ajeetgarh</option>
+                        <option value="ajnala">Ajnala</option>
+                        <option value="akaltara">Akaltara</option>
+                        <option value="akhnoor">Akhnoor</option>
+                        <option value="allagadda">Allagadda</option>
+                        <option value="amarpur">Amarpur</option>
+                        <option value="ankleshwar">Ankleshwar</option>
+                        <option value="annur">Annur</option>
+                        <option value="bachwara">Bachwara</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>State<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>City<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Mobile No<span>*</span></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Billing Address</td>
+                <td><input type="checkbox" style="height: 13px;width: 13px;">Same as Shipping Address</td>
+            </tr>
+
+        </table>
+            
+            
+        
+    </div>
 </body>
 </html>
-<script>
-   function gotoLogin(){
-       window.location.href= "loginPage.html"
-   }
-   function gotoRegister(){
-       window.location.href= "register.html"
-   }
-</script>

@@ -73,7 +73,7 @@
 <script>
 document.querySelector("#login").addEventListener("click",logging)
 function logging(){
-var detail = JSON.parse(localStorage.getItem("register"))
+var detail = JSON.parse(localStorage.getItem("registerDetails"))
 var emailMob = document.querySelector("#mobEmail").value;
 var passWord = document.querySelector("#password").value;
 for(i = 0; i < detail.length; i++)

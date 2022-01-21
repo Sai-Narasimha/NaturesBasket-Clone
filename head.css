@@ -1,0 +1,243 @@
+#main-head{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    /* position: fixed; */
+    /* border: 2px solid rgb(53, 50, 50); */
+}
+#messege{
+    width: 99%;
+    height: 25px;
+    border: 2px solid #d26e9c;
+    top:0;
+    left: 1;
+    padding-top: 2px;
+    border-radius: 5px;
+    /* background-color: #fbf2f5; */
+    /* position: fixed; */
+}
+#container{
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin:auto; 
+    margin-top: 10px;
+    /* background-color:lightpink; */
+  
+}
+.box1{
+    width:62%;
+    margin-left: 5%;
+    /* background-color: lightblue; */
+}
+.box1>.box1-div1{
+    display: flex;
+    height: 20px;
+    width: 85%;
+    margin-left: 20px;
+    margin-top: 5px;
+    /* background-color: gray; */
+}
+.box1-div1>.options{
+    margin-left: 22px;
+    padding-right: 15px;
+    padding-top: 4px;
+    border-right: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+   
+}
+#selectDiv{
+    margin-left: 15px;
+}
+#header-select{
+    width: 80px;
+    border: 0px;
+    cursor: pointer;
+    text-align: left;
+    font-family: CeraPRO-Regular;
+    font-size: 14px;
+}
+.enter-pin{
+    
+    margin-left: 15px;
+    border: 1px solid rgb(110, 98, 98);
+}
+.enter-pin>input{
+    width: 100px;
+    border:0px
+}
+.box1-div2{
+    display: flex;
+}
+#search-div{
+    width:100%;
+    /* background-color: lightgray; */
+    margin-top: 5px;
+
+}
+.header-searchBar{
+    width:100%;
+    height:30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    border: 1px solid gray;
+    border-right: 0px;
+    
+    
+}
+.box1-div2>img{
+    height: 35px;
+    margin-top: 5px;
+}
+#header-trendSearches{
+    width: 100%;
+    margin-left: 0px;
+    border: green 1px solid;
+   /* display: none; */
+   visibility: hidden;
+}
+/* #search-div:hover #header-trendSearches{
+   visibility: visible;
+    background-color:white;
+    text-align: center;
+    line-height: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 19.72px;
+} */
+.box2-div1{
+    display: flex;
+    margin-left: 15px;
+}
+.header-login{
+    margin-top: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.header-login:hover{
+    text-decoration: underline;
+}
+.box2-div1>.line{
+    margin-top: 5px;
+}
+.header-register{
+    margin-top: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.header-register:hover{
+    text-decoration: underline;
+}
+.header-login-img{
+    display: flex;
+
+}
+.header-starImg{
+    margin-top: 10px;
+    margin-left: 19px;
+    font-size: 26px;
+    color:#84bb3a ;
+    cursor: pointer;
+}
+.header-cartImg{
+    margin-top: 10px;
+    margin-left: 11px;
+    padding-left: 13px;
+    font-size: 26px;
+    border-left: 1px solid gray;
+    color:#84bb3a ;
+    cursor: pointer;
+    
+}
+#header-loginPage{
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    height: 100px;
+    /* background-color: gray; */
+}
+#header-loginPage>img{
+    margin-left: 77%;
+    width: 20px;
+    height:20px
+    
+}
+#header-registerPage{
+    display: none;
+}
+.inputs{
+    margin: auto;
+    margin-left: 50px;
+    width: 200px;       
+}
+#mail{
+    margin-left: 25%;
+}
+.logs{
+    height: 25px;
+    font-family:"CeraPRO-Regular";
+}
+.nav-div{
+    /* background-color: brown; */
+    height:auto;
+}
+.nav-bar{
+    display: flex;
+    width: 90%;
+    height:30px;
+    /* background-color: yellow; */
+    margin: auto;
+}
+
+#shop-by-category{
+    width: 220px;
+    font-size: 20px;
+    padding: 5px 7px;
+   
+    letter-spacing: 2px;
+    color:rgb(216, 98, 138);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    background-color: lightgray;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+#drop-down{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: none;
+}
+.abc:hover #drop-down{
+    /* display: block; */
+}
+.list-of-items{
+    padding: 2px 10px;
+    margin-top: 7px;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    border-bottom: 1px solid lightgray;
+    font-weight: 400;
+    cursor: pointer;
+}
+.list-of-items:hover{
+    background-color: #84bb3a;
+    color: white;
+    font-weight: 400;
+}
+.nav-options{
+    margin-left: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    margin-top: 6px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    /* background-color: RED; */
+
+}
+.nav-options:hover{
+    background-color: #d3d3d3;
+    border-bottom:3px solid #84bb3a ;
+}

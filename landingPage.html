@@ -6,139 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <style>
-        .landing_corousil1{
-            width: 90%;
-            background-color: green;
-            height: 350px;
-            margin: auto;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-        #landing_div1{
-            display: flex;
-            width: 90%;
-            margin: auto;
-            margin-top: 20px;
-        }
-        #landing_div1>.ges{
-            width: 490px;
-            margin-right: 25px;    
-        }
-        #landing_div1>.ges1,.ges{
-            width: 495px;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-        }
-        .landing_div2{
-            width: 90%;
-            height: 500px;
-            display: flex;
-            margin: auto;
-            margin-top: 20px;
-            background-color: blueviolet;
-            
-            
-        }
-        .arrowleft,.arrowright{
-            width: 3%;
-            height: 50px;
-            margin-top: 120px;
-            font-weight: 100;
-        }
-        .arrowright{
-            margin-left: 10px;
-        
-        }
-        .images_flex{
-            display: flex;
-            width:95%; 
-            height: 300px;
-            margin-left: 15px;
-            background-color: red;
-        }
-        .images{
-            width:50%;
-            margin-left: 5px;
-            margin-right: 15px;
-            height: 300px;
-            
-           
-            
-        }
-        .images>.img_margin_right{
-            font-weight: 400;
-           
-           
-        }
-        
-        .images>.img_margin_right,.img_margin{
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
-            height: 100%;
-            cursor: pointer;
-        }
-        .images_info{
-            margin-top: -20px;
-            background-color: blue;
-        }
-        .images_info>h4{
-            font-size: 19px;
-            font-family: Arial, Helvetica, sans-serif;
-            cursor: pointer;
-        }
-        .images_info>h5{
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 400;
-            font-size: 15px;
-            padding-bottom: 2px;
-            border-bottom: 1px solid rgb(236, 234, 234);
-            cursor: pointer;
-        }
-        .images_info>div{
-            font-size: 14px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #84bb3a;
-            cursor: pointer;
-            margin-top: -10px;
-        }
-        .landing_div3{
-            width: 90%;
-            height: 330px;
-            background-color: yellow;
-            margin: auto;
-            margin-top: 20px;
-        }
-        .landing_div4{
-            margin: auto;
-            display: flex;
-            width: 90%;
-            height: 500px;
-            background-color: purple;
-            
-        }
-        .landing_div4>.landing_trending{
-            width: 30%;
-            margin: 10px;
-            height: 100%;
-            background-color: cadetblue;
-            
-        }
-        .trend_product{
-            width:100%;
-            height: 70%;
-            background-color: red;
-        }
-
-
-
-
-    </style>
+    <link rel="stylesheet" href="landingPage.css">
+    <link rel="stylesheet" href="head.css"/>
+    <link rel="stylesheet" href="footer.css"/>
+    
 </head>
 <body>
+    <div id="main-head">
+        <div id="messege">Now accepting Wine & Beer orders (Select stores, Mumbai Only). Delivery timings 10.00 AM to 8:00 PM subject to verification of permit and age by delivery person. Age criteria 21+ for mild beer and 25+ for strong beer and wine.</div>
+        <div id="container">
+            <img src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2"/>
+            <div class="box1">
+                <div class="box1-div1">
+                    <div class="options">Online Slots Availability</div>
+                    <div class="options">Fresh & Fast</div>
+                    <div class="options">Store Locator</div>
+                    <div class="options">Contact Us</div>
+                    <div id = "selectDiv">
+                        <i class="fas fa-map-marker-alt" style="font-size: 13px; margin-top: 4px;color: green;"></i>
+                        <select id="header-select">
+                            <option value="ajeetgarh">Ajeetgarh</option>
+                            <option value="ajnala">Ajnala</option>
+                            <option value="akaltara">Akaltara</option>
+                            <option value="akhnoor">Akhnoor</option>
+                            <option value="allagadda">Allagadda</option>
+                            <option value="amarpur">Amarpur</option>
+                            <option value="ankleshwar">Ankleshwar</option>
+                            <option value="annur">Annur</option>
+                            <option value="bachwara">Bachwara</option>
+                            <option value="badnawar">Badnawar</option>
+                            <option value="chalisgon">Chalisgon</option>
+                            <option value="chalsa">Chalsa</option>
+                            <option value="champa">Champa</option>
+                            <option value="dalli rajhara">Dalli rajhara</option>
+                            <option value="damoh">Amoh</option>
+                            <option value="deogarh">Deogarh</option>
+                            <option value="ekma">Ekma</option>
+                            <option value="gaxhipur">Gaxhipur</option>
+                            <option value="gohana">Gohana</option>
+                            <option value="ahiri">Ahiri</option>
+                            <option value="akole">Akole</option>
+                        </select>
+                    </div>
+                    <div class="enter-pin"><input type="text" placeholder="Enter Pin Code" id="pincode" /></div>
+
+                </div>
+                <div class="box1-div2">
+                    <div id="search-div">
+                        <input type="text" placeholder="stat searching..." class = "header-searchBar">
+                        <div id="header-trendSearches" class = "list" >
+                            <h3 style="padding-left: 3%;"> Trending Searches</h3>
+                            <ul style="list-style-type: none;">
+                                <li>Organic</li>
+                                <li>Fresh Artisinial Breads</li>
+                                <li>Cold cuts & Seafood</li>
+                                <li>Diabetic Friendly Foods</li>
+                                <li>L'Exclusif</li>
+                                <li>Healthy Alternatives</li>
+                                <li>Birthdays & Anniversary Gift Hampers</li>
+                                <li>Platters & Dips</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src = "https://www.naturesbasket.co.in/Images/search-button.jpg"/>
+                </div>
+            </div>
+            <div id="box2">
+                <div class="box2-div1">
+                    <div class = "header-login" onclick = "gotoLogin()">Login</div>
+                    <div class="line">|</div>
+                    <div class="header-register"onclick = "gotoRegister()">Register</div>
+                </div>
+                <div class="header-login-img">
+                    <div class="header-starImg"><i class="fas fa-star"></i></div>
+                    <div class="header-cartImg"><i class="fas fa-cart-plus"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-div">
+            <div class="nav-bar">
+                <div class = "nav-shop-menu">
+                    <div class="abc">
+                        <div style="display: flex;"><div id="shop-by-category">SHOP BY CATEGORY</div></div>
+                        
+                        <div id="drop-down">
+                            <div class="list-of-items">Gift Hampers</div>
+                            <div class="list-of-items">Fruits & Vegitables</div>
+                            <div class="list-of-items">Health</div>
+                            <div class="list-of-items">Indian Grocery</div>
+                            <div class="list-of-items">Snack Bar</div>
+                            <div class="list-of-items">Breakfast,Dairy & Bakery</div>
+                            <div class="list-of-items">Instant Meals & Aids</div>
+                            <div class="list-of-items">The Good Food Cafe</div>
+                            <div class="list-of-items">Wine & Beer</div>
+                            <div class="list-of-items">Packin Material</div>
+                        </div>  
+                    </div>                  
+                </div>
+                    <div class="nav-options" onclick="gotoFruits()">FRUITS VEGETABLES</div>
+                    <div class="nav-options" onclick="gotoGrocery()">INDIAN GROCERY</div>
+                    <div class="nav-options">HEALTH</div>
+                    <div class="nav-options">SNACK BAR</div>
+                    <div class="nav-options">WINE BEER</div>
+                    <div class="nav-options">DELICIOUS</div>
+                    <div class="nav-options">GIFT HAMPERS</div>
+               
+               
+            </div>
+        </div>
+    </div>
+    
     <div id="lading-cont">
-        <div class="landing_corousil1"></div>
+        <div id="landing_corousil1"></div>
         <div id="landing_div1">
             <img src="https://www.naturesbasket.co.in/Images/NaturesBasketGifting.jpeg?v=6" alt="" class="ges">
             <img src="https://www.naturesbasket.co.in/Images/Japanesecuisine-webbox.png?v=5" alt="" class="ges">
@@ -196,40 +175,283 @@
             </div>
             
         <h3 style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 28px;font-weight: 400;padding-top: 10px;letter-spacing: 1px;">WHAT'S TRENDING</h3>
-        <div class="landing_div4">
-            <div class="landing_trending">
-                <div class="trend_product">
-                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c14f4343-335e-42d6-84bc-7d2e412d6660_425x425.jpg" style="width: 100%;height:100%;"/>
-                </div>
-                <div class="product_info">
-                    <h3>RAY SPRAY OIL JAR 200ML</h3>
-                    <h4>1 Pc</h4>
-                    <div style="display: flex;">
-                        <div class="price">MRP <i class="fas fa-rupee-sign">499</i></div>
-                        <div id="spray"></div>
-                    </div>
+        <div id="landing_div4"></div>
+
+    </div>
+    <div id="footer_cont">
+        <hr>
+        <div style="display: flex;">
+            <p style="padding-left:3%;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: 400;">Payment Method</p>
+            <img src="https://www.naturesbasket.co.in/Images/icons-card-payments-mode.png"/>
+            <p style="padding-left:30%;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: 400;">Keep in Touch</p>
+            <div class = 'social_media_logos' style="margin-top: 10px;">
+                <i class="fab fa-facebook-f" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-twitter" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-youtube" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-instagram" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-pinterest" style="padding-right:10px;font-size: 27px;"></i>
+            </div> 
+            
+        </div>
+        <hr>
+        <div class="footer_items_info">
+            <div class="info">
+                <div>
+                    <h3>FRESH & FAST</h3>
+                    <br>
+                    <H3>GIFT HAMPERS</H3>
+                    <UL>
+                        <LI>Birthday & Anniversary Gift Hampers</LI>
+                        <li>World Cuisine Gift Hampers</li>
+                        <li>Organic & Health Gift Hampers</li>
+                        <li>Coffee & Tea Gift Hampers</li>
+                        <li>Get Well Soon Gift Hampers</li>
+                        <li>Cheese & Meat Platters</li>
+                    </UL>
+                    <h3>FRUITS & VEGITABLES</h3>
+                    <UL>
+                        <li>Vegetables</li>
+                        <li>Exotic Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Organic Fruits & Vegetables</li>
+                        <li>Exotic Fruits</li>
+                        <li>Canned & Frozen</li>
+                        <li>Cold - Pressed Fresh Juices</li>
+                        
+                    </UL>
                 </div>
             </div>
-            <div class="landing_trending">
-                <div class="trend_product">
-                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/dbffcc93-9bce-442f-837f-d5d5f073c0c0_425x425.jpg" style="width: 100%;height:100%;"/>
+            <div class="info">
+                <div>
+                    <h3>WEIGHT MANAGEMENT FOODS</h3>
+                    <ul>
+                        <li>Dry Fruits, Muesli & Bran</li>
+                        <li>Flours & Grains</li>
+                        <li>Rice, Couscous & Quinoa</li>
+                        <li>Seafood</li>
+                        <li>Soups & Dressings</li>
+                        <li>Soya Snacks, Biscuits & More</li>
+                        <li>Supplements</li>
+                        <li>Tea & Beverages</li>
+                    </ul>
                 </div>
-                <div class="product_info"></div>
             </div>
-            <div class="landing_trending">
-                <div class="trend_product">
-                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c14f4343-335e-42d6-84bc-7d2e412d6660_425x425.jpg" style="width: 100%;height:100%;"/>
+            <div class="info">
+                <div>
+                    <h3>HEART-HEALTHY FOODS</h3>
+                    <ul>
+                        <li>Amaranth, Couscous & Quinoa</li>
+                        <li>Flours, Rice & Condiments</li>
+                        <li>Bread & Breakfast</li>
+                        <li>Butters & Oils</li>
+                        <li>Dry Fruits, Seeds & Powders</li>
+                        <li>Seafood & Lean Meats</li>
+                        <li>Snacks & Others</li>
+                    </ul>
                 </div>
-                <div class="product_info"></div>
             </div>
-            <div class="landing_trending">
-                <div class="trend_product">
-                    <img src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/dbffcc93-9bce-442f-837f-d5d5f073c0c0_425x425.jpg" style="width: 100%;height:100%;"/>
+            <div class="info">
+                <div>
+                    <h3>BREAKFAST & DAIRY</h3>
+                    <ul>
+                        <li>Cereals, Bars & Others</li>
+                        <li>Jams, Preserves & Conserves</li>
+                        <li>Honey</li>
+                        <li>Indian Breakfast Favourites</li>
+                        <li>Spreads</li>
+                        <li>Butters & Margarines</li>
+                        <li>Bakery</li>
+                    </ul>
+                    <!-- <br> -->
+                    <h3>INSTANT MEAL & AIDS</h3>
+                    <ul>
+                        <li>Ready to Cook</li>
+                        <li>Ready to Eat</li>
+                        <li>Accessories</li>
+                        <li>Books</li>
+                    </ul>
                 </div>
-                <div class="product_info"></div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>SNACKS & BEVERAGES</h3>
+                    <UL>
+                        <li>Cookies & Crackers</li>
+                        <li>Frozen Snacks</li>
+                        <li>Antipasti</li>
+                        <li>Dry Snacks</li>
+                        <li>Fresh Snacks & Party Food</li>
+                        <li>Relishes & Pickels</li>
+                        <li>Carbonated Drinks</li>
+                        <li>Teas</li>
+                        <li>Water</li>
+                        <li>Concentrate</li>
+                        <li>Coffe</li>
+                        <li>Energy</li>
+                        <li>Dairy</li>
+                        <li>Juice</li>
+                    </UL>
+                </div>
             </div>
         </div>
-
+    <hr>
+        <p style="padding-left: 90px; font-family: Arial, Helvetica, sans-serif;font-size: 14px;letter-spacing: 1px;">© 2020 Natures Basket Limited.  All rights reserved.|Privacy Policy|Terms of Use|Home Delivery Number - 8880077745|Site Map|Mobile Site|FSSAI License Number - 11519002000496</p>
     </div>
 </body>
 </html>
+<script>
+    var id;
+    function start(){
+        var div = document.getElementById("landing_corousil1")
+        div.innerHTML = null;
+        var image = JSON.parse(localStorage.getItem("image"))
+        console.log(image)
+        var img = document.createElement("img")
+        img.id = "corousil_image"
+        img.src = image[0];
+        div.append(img)
+        var i = 1;
+        id = setInterval(function(){
+            if(i === image.length){
+                i = 0;
+            }
+            img.src = image[i]
+            div.append(img)
+            i++;
+        }, 3000);
+    }
+    start();
+
+    var trending_products = [
+        {
+            images:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c14f4343-335e-42d6-84bc-7d2e412d6660_425x425.jpg",
+            product_name: "RAY SORAY OIL JAR 200ML",
+            qty:"1 Pc",
+            price: 499,
+            
+        },
+        {
+            images:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/dbffcc93-9bce-442f-837f-d5d5f073c0c0_425x425.jpg",
+            product_name: "HAAGEN DAZS MANGO RASPBERRY 473ML",
+            qty:"1 Pc",
+            price: 780,
+            
+        },
+        {
+            images:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c14f4343-335e-42d6-84bc-7d2e412d6660_425x425.jpg",
+            product_name: "RAY SORAY OIL JAR 200ML",
+            qty:"1 Pc",
+            price: 499,
+            
+        },
+        {
+            images:"https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/dbffcc93-9bce-442f-837f-d5d5f073c0c0_425x425.jpg",
+            product_name: "HAAGEN DAZS MANGO RASPBERRY 473ML",
+            qty:"1 Pc",
+            price: 780,
+            
+        }
+
+    ];
+
+    var trending=[];
+    trending_products.map(function(item){
+        var trending_obj={
+            name : item.product_name,
+            img : item.images,
+            qty : item.qty,
+            price : item.price
+        }
+
+        trending.push(trending_obj);
+        console.log(trending)
+    })
+    displayItems()
+
+    localStorage.setItem("treanding_db",JSON.stringify(trending))
+
+    var cart_arr= JSON.parse(localStorage.getItem("cart_item")) || [];
+
+    function displayItems()
+    {
+        trending.map(function(items)
+        {
+            var singlediv = document.createElement("div")
+            singlediv.id = "inside_div"
+
+            var img_div = document.createElement("div")
+            var img = document.createElement("img")
+            img.src= items.img;
+            img.id= "trend_img"
+            img_div.append(img)
+
+            var content_div = document.createElement("div")
+            content_div.id = "content_div"
+
+            var h3 = document.createElement("h3")
+            h3.textContent = items.name;
+            h3.id = "name"
+
+            var flexdiv = document.createElement("div")
+            flexdiv.id = "flex_div"
+
+            var price_div = document.createElement("div")
+            price_div.id = "price_div"
+
+            var price = document.createElement("p")
+            price.textContent = `MRP ${items.price}`;
+            price_div.append(price)
+
+            var btn = document.createElement("button")
+            btn.textContent = "Add"
+            btn.id = "add_btn"
+
+            flexdiv.append(price_div,btn)
+
+            var qty = document.createElement("p")
+            qty.textContent = items.qty
+
+            content_div.append(h3,qty,flexdiv)
+            singlediv.append(img_div,content_div);
+
+            img_div.addEventListener("click", function(){
+                localStorage.setItem("clicked_item",JSON.stringify(items));
+                window.location.href ="product.html"
+            })
+            var data_obj = {
+                name1 : items.h3,
+                image1 : items.img,
+                price1 : items.price,
+                qty1 : items.qty
+
+            }
+            btn.addEventListener("click",function(){
+                cart_arr.push(data_obj);
+                localStorage.setItem("cart_item",JSON.stringify(cart_arr));
+                window.location.href ="cart.html"
+
+            })
+
+            document.getElementById("landing_div4").append(singlediv)
+
+
+        });
+    }
+    function gotoLogin(){
+       window.location.href= "loginPage.html"
+   }
+   function gotoRegister(){
+       window.location.href= "register.html"
+   }
+   function gotoFruits(){
+       window.location.href = "fruits.html"
+   }
+   function gotoGrocery(){
+       window.location.href = "indianGrocery.html"
+   }
+ 
+
+    
+   
+    
+</script>
