@@ -4,48 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address & Details</title>
     <link rel="stylesheet" href="head.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Check Out Page</title>
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
         }
-        #del_details{
-            margin: auto;
-            margin-top: 50px;
+        #card_det{
             width: 40%;
-            /* height: 200px; */
+            margin: auto;
+            margin-top: 150px;
+            height: 500px;
             border: 5px solid #d50;
         }
         td{
-            
-            padding-top: 15px;
-            /* padding-right: 10px; */
-            
+            font-size: 20px;
+            padding-top: 20px;
+
         }
-        td>input{
-            height: 30px;
-            width: 200px;
+        td>.name{
+            width: 230px;
         }
-        span{
-            color: red;
-        }
-        button{
-            margin-left: 120px;
-            margin-top: 5px;
-            font-family: Arial, Helvetica, sans-serif;
-            width: 80px;
-            height: 30px;
-            cursor: pointer;
-        }
-        button:hover{
-            background-color:#5d0;
-            color: white;
-            
-            
-            
-        }
+       td>#cvv{
+           margin-left: -50px;
+           width: 100px;
+       }
+       #otp{
+           margin-left: 180px;
+           margin-top: 50px;
+       }
     </style>
 </head>
 <body>
@@ -120,107 +108,41 @@
                 </div>
             </div>
         </div>
-        <div class="nav-div">
-            <div class="nav-bar">
-                <div class = "nav-shop-menu">
-                    <div class="abc">
-                        <div style="display: flex;"><div id="shop-by-category">SHOP BY CATEGORY </div></div>
-                        
-                        <div id="drop-down">
-                            <div class="list-of-items">Gift Hampers</div>
-                            <div class="list-of-items">Fruits & Vegitables</div>
-                            <div class="list-of-items">Health</div>
-                            <div class="list-of-items">Indian Grocery</div>
-                            <div class="list-of-items">Snack Bar</div>
-                            <div class="list-of-items">Breakfast,Dairy & Bakery</div>
-                            <div class="list-of-items">Instant Meals & Aids</div>
-                            <div class="list-of-items">The Good Food Cafe</div>
-                            <div class="list-of-items">Wine & Beer</div>
-                            <div class="list-of-items">Packin Material</div>
-                        </div>  
-                    </div>                  
-                </div>
-                <div class="nav-options" onclick="gotoFruits()">FRUITS VEGETABLES</div>
-                <div class="nav-options" onclick="gotoGrocery()">INDIAN GROCERY</div>
-                <div class="nav-options">HEALTH</div>
-                <div class="nav-options">SNACK BAR</div>
-                <div class="nav-options">WINE BEER</div>
-                <div class="nav-options">DELICIOUS</div>
-                <div class="nav-options">GIFT HAMPERS</div>
-           
-               
-               
-            </div>
-        </div>
-    </div>
-    <div id="del_details">
-        <h3 style="font-family: Arial, Helvetica, sans-serif;font-weight: 400;color: green;text-align: center;font-size: 20px;">Enter Shipping Address</h3>
+    <div id="card_det">
+        <h2 style="text-align: center;">Payment Details</h2>
         <table>
             <tr>
-                <td>First Name<span>*</span></td>
-                <td><input type="text"></td>
+                <td>Account Holder's Name :</td>
+                <td><input type="text" class="name"></td>
             </tr>
             <tr>
-                <td>Last Name<span>*</span></td>
-                <td><input type="text"></td>
+                <td>Card Number</td>
+                <td><input type="text" class="name"></td>
             </tr>
             <tr>
-                <td>Address <span>*</span></td>
-                <td><textarea name="" id="" cols="21" rows="5"></textarea></td>
-            </tr>
-            <tr>
-                <td>Landmark<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Pincode<span>*</span></td>
-                <td><input type="text"></td>  
-            </tr>
-            <tr>
-                <td>Area <span>*</span></td>
+                <td>Expiry Date</td>
+                <td ><input type="text" placeholder="MM/YYYY"></td>
                 
-                <td>
-                    <select style="width: 200px;height: 40px;">
-                        <option value="ajeetgarh">Ajeetgarh</option>
-                        <option value="ajnala">Ajnala</option>
-                        <option value="akaltara">Akaltara</option>
-                        <option value="akhnoor">Akhnoor</option>
-                        <option value="allagadda">Allagadda</option>
-                        <option value="amarpur">Amarpur</option>
-                        <option value="ankleshwar">Ankleshwar</option>
-                        <option value="annur">Annur</option>
-                        <option value="bachwara">Bachwara</option>
-                    </select>
-                </td>
-                
+                <td><input type="text" placeholder="CVV" id="cvv"></td>
             </tr>
-            <tr>
-                <td>State<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-
-            <tr>
-                <td>City<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Mobile No<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Billing Address</td>
-                <td><input type="checkbox" style="height: 13px;width: 13px;">Same as Shipping Address</td>
-            </tr>
-            
         </table>
-            <button onclick ="gotoNext()">Next>></button>
-            
-        
+        <input type="text" placeholder="Enter OTP" id = "otp">
+        <button onclick="alerting()">Verify</button>
     </div>
 </body>
 </html>
 <script>
-    function gotoNext(){
-        window.location.href = "cardDetails.html"
+    
+    function alerting(){
+        var otp = document.getElementById("otp").value;
+        
+        if(otp == 123456){
+            alert("OTP Verified and Your Order Was Placed")
+            window.location.href = "landingPage.html"
+        }
+        else{
+            alert("Invalid OTP")
+        }
+        
     }
 </script>

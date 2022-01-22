@@ -4,46 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address & Details</title>
+    <title>Document</title>
     <link rel="stylesheet" href="head.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #del_details{
+        #cart_head_img{
+            width: 90%;
+            height: 230px;
+            border: 1px solid red;
             margin: auto;
-            margin-top: 50px;
-            width: 40%;
-            /* height: 200px; */
-            border: 5px solid #d50;
+            margin-top: 20px;
+            /* background-image: url("https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png");
+            background-size: cover;
+            background-repeat: no-repeat; */
         }
-        td{
-            
-            padding-top: 15px;
-            /* padding-right: 10px; */
-            
+        #cart_head_img>img{
+            width: 100%;
+            height: 100%;
         }
-        td>input{
-            height: 30px;
-            width: 200px;
+        #cart_filters{
+            width: 20%;
+            margin-top: 20px;
+            margin-left: 30%;
+            background-color: red;
         }
-        span{
-            color: red;
-        }
-        button{
-            margin-left: 120px;
-            margin-top: 5px;
+        #cart_filters>select{
+            width: 49%;
+            height: 25px;
+            font-size: 18px;
             font-family: Arial, Helvetica, sans-serif;
-            width: 80px;
-            height: 30px;
-            cursor: pointer;
-        }
-        button:hover{
-            background-color:#5d0;
-            color: white;
-            
-            
+
             
         }
     </style>
@@ -89,7 +79,7 @@
 
                 </div>
                 <div class="box1-div2">
-                    <div id="search-div" style = "width:90%">
+                    <div id="search-div">
                         <input type="text" placeholder="stat searching..." class = "header-searchBar">
                         <nav id="header-trendSearches" class = "list" >
                             <h3 style="padding-left: 3%;"> Trending Searches</h3>
@@ -140,6 +130,7 @@
                         </div>  
                     </div>                  
                 </div>
+
                 <div class="nav-options" onclick="gotoFruits()">FRUITS VEGETABLES</div>
                 <div class="nav-options" onclick="gotoGrocery()">INDIAN GROCERY</div>
                 <div class="nav-options">HEALTH</div>
@@ -147,80 +138,39 @@
                 <div class="nav-options">WINE BEER</div>
                 <div class="nav-options">DELICIOUS</div>
                 <div class="nav-options">GIFT HAMPERS</div>
-           
-               
-               
+ 
             </div>
         </div>
     </div>
-    <div id="del_details">
-        <h3 style="font-family: Arial, Helvetica, sans-serif;font-weight: 400;color: green;text-align: center;font-size: 20px;">Enter Shipping Address</h3>
-        <table>
-            <tr>
-                <td>First Name<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Last Name<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Address <span>*</span></td>
-                <td><textarea name="" id="" cols="21" rows="5"></textarea></td>
-            </tr>
-            <tr>
-                <td>Landmark<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Pincode<span>*</span></td>
-                <td><input type="text"></td>  
-            </tr>
-            <tr>
-                <td>Area <span>*</span></td>
-                
-                <td>
-                    <select style="width: 200px;height: 40px;">
-                        <option value="ajeetgarh">Ajeetgarh</option>
-                        <option value="ajnala">Ajnala</option>
-                        <option value="akaltara">Akaltara</option>
-                        <option value="akhnoor">Akhnoor</option>
-                        <option value="allagadda">Allagadda</option>
-                        <option value="amarpur">Amarpur</option>
-                        <option value="ankleshwar">Ankleshwar</option>
-                        <option value="annur">Annur</option>
-                        <option value="bachwara">Bachwara</option>
-                    </select>
-                </td>
-                
-            </tr>
-            <tr>
-                <td>State<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
+    <div id="cart_head_img">
+        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png"/>
+        <div id="cart_filters">
+            <select>
+                <option value="name">Filter by Name</option>
+                <option value="AtoZ" onClick = "fromAtoZ()">Filter A to Z</option>
+                <option value="ZtoA" onClick = "fromZtoA()">Filter Z to A</option>
+            </select>
+            <select>
+                <option value="price">Filter by Price</option>
+                <option value="low" onClick = "lowToHigh()">Low to High</option>
+                <option value="high" onClick = "highToLow()">High to low</option>
+            </select>
+        </div>
 
-            <tr>
-                <td>City<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Mobile No<span>*</span></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Billing Address</td>
-                <td><input type="checkbox" style="height: 13px;width: 13px;">Same as Shipping Address</td>
-            </tr>
-            
-        </table>
-            <button onclick ="gotoNext()">Next>></button>
-            
-        
     </div>
 </body>
 </html>
 <script>
-    function gotoNext(){
-        window.location.href = "cardDetails.html"
+    function fromAtoZ(){
+        console.log("am from a to z")
+    }
+    function fromZtoA(){
+        console.log("am from z to a")
+    }
+    function lowToHigh(){
+        console.log("am from low to high")
+    }
+    function highToLow(){
+        console.log("am from high to low")
     }
 </script>

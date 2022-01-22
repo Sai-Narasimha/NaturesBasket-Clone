@@ -4,37 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="head.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="worldBrand.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
-        #cart_head_img{
-            width: 90%;
-            height: 230px;
-            border: 1px solid red;
-            margin: auto;
-            margin-top: 20px;
-            /* background-image: url("https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png");
-            background-size: cover;
-            background-repeat: no-repeat; */
-        }
-        #cart_head_img>img{
+        
+        #cont{
+            /* border: 5px solid orange; */
             width: 100%;
-            height: 100%;
+            display: flex;
+            background-color: rgb(226, 224, 224);
+            margin-top: 10px;
         }
-        #cart_filters{
+        #cart_container{
+            /* border: 10px solid red; */
+            /* display: grid;
+            grid-template-columns: repeat(6,1fr); */
+            /* display: flex; */
+            gap: 20px;
+        }
+        #prod_name{
+            /* background-color: blueviolet; */
+            width: 30%;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+        #prodImg_div{
+            /* background-color: red; */
+            width: 7%;
+        }
+        #prod_price{
+            /* background-color: blue; */
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+        #prod_dis{
+            /* background-color: green; */
             width: 20%;
-            margin-top: 20px;
-            margin-left: 30%;
-            background-color: red;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
         }
-        #cart_filters>select{
-            width: 49%;
-            height: 25px;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
+        #prod_qty{
+            /* background-color: yellow; */
+            width: 20%;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+        #sub_total{
+            /* background-color: pink; */
+            width: 20%;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+        #prod_img{
+            padding: 10px;
+            width: 80%;
+            height: 80px ;
+        }
+        #remove_btn{
+            /* background-color: rgb(116, 5, 5);
+            border: 1px solid rgb(116, 5, 5); */
+            background-color: rgb(226, 224, 224);
+            border: rgb(226, 224, 224);
 
+            /* color: white; */
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
             
+        }
+        #total_container{
+            border: 5px solid #d50;
+            border-radius: 10px;
+            width: 25%;
+            margin: auto;
+            margin-right: 10px;
+            margin-top:20px;
+            padding: 10px;
+        }
+        #checkOut{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -43,8 +106,8 @@
         <div id="messege">Now accepting Wine & Beer orders (Select stores, Mumbai Only). Delivery timings 10.00 AM to 8:00 PM subject to verification of permit and age by delivery person. Age criteria 21+ for mild beer and 25+ for strong beer and wine.</div>
         <div id="container">
             <img src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2"/>
-            <div class="box1">
-                <div class="box1-div1">
+            <div class="box1" style="margin-left: 15px;">
+                <div class="box1-div1" style="width: auto;">
                     <div class="options">Online Slots Availability</div>
                     <div class="options">Fresh & Fast</div>
                     <div class="options">Store Locator</div>
@@ -76,7 +139,7 @@
                         </select>
                     </div>
                     <div class="enter-pin"><i class="fas fa-pen" style="font-size: 13px;color: green;"></i><input type="text" placeholder="Enter Pin Code" id="pincode" /></div>
-
+  
                 </div>
                 <div class="box1-div2">
                     <div id="search-div">
@@ -106,7 +169,7 @@
                 </div>
                 <div class="header-login-img">
                     <div class="header-starImg"><i class="fas fa-star"></i></div>
-                    <div class="header-cartImg"><i class="fas fa-cart-plus"></i></div>
+                    <div class="header-cartImg" onclick="goToCart()"><i class="fas fa-cart-plus"></i></div>
                 </div>
             </div>
         </div>
@@ -130,47 +193,340 @@
                         </div>  
                     </div>                  
                 </div>
-
-                <div class="nav-options" onclick="gotoFruits()">FRUITS VEGETABLES</div>
+                <div class="nav-options" onclick="gotoFruits()">FRUITS & VEGETABLES</div>
                 <div class="nav-options" onclick="gotoGrocery()">INDIAN GROCERY</div>
                 <div class="nav-options">HEALTH</div>
                 <div class="nav-options">SNACK BAR</div>
                 <div class="nav-options">WINE BEER</div>
                 <div class="nav-options">DELICIOUS</div>
                 <div class="nav-options">GIFT HAMPERS</div>
- 
+           
+               
+               
             </div>
         </div>
     </div>
-    <div id="cart_head_img">
-        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/websitecart.png"/>
-        <div id="cart_filters">
-            <select>
-                <option value="name">Filter by Name</option>
-                <option value="AtoZ" onClick = "fromAtoZ()">Filter A to Z</option>
-                <option value="ZtoA" onClick = "fromZtoA()">Filter Z to A</option>
-            </select>
-            <select>
-                <option value="price">Filter by Price</option>
-                <option value="low" onClick = "lowToHigh()">Low to High</option>
-                <option value="high" onClick = "highToLow()">High to low</option>
-            </select>
-        </div>
 
+    
+    <div id = cart_container>
+        <!-- <div id = "prodImg_div"></div>
+        <div id = "prod_name"></div>
+        <div id = "prod_price"></div>
+        <div id = "prod_dis">Rs 0.00</div>
+        <div id = "prod_qty">1</div>
+        <div id = "sub_total"></div> -->
+    </div>
+    <div id = "total_container">
+        <form id="promo">
+            <h3 id="total"></h3>
+            <h2 id="promotxt">Apply  promo code for discount</h2>
+            <input id ="coupon" type="text"/>
+            <input id="sub" type="submit"/>
+        </form>
+        <h3 id="sav"></h3>
+        <h2 id ="dis"></h2>
+        <br>
+
+        <button onclick="delivery()" id = "checkOut">Check Out</button>
+    </div>
+    <div id="brand_div">
+        <h1>SHOP BY WORLD BRANDS</h1>
+        <div id="brand_logos">
+            <img src="https://d1z88p83zuviay.cloudfront.net/Images/lexlusif.jpg"/>
+            <img src="https://d1z88p83zuviay.cloudfront.net/Images/healthy.jpg" alt="">
+            <img src="https://d1z88p83zuviay.cloudfront.net/Images/cambay-tiger.jpg" alt="">
+            <img src="https://d1z88p83zuviay.cloudfront.net/Images/real-thai.jpg" alt="">
+            <img src="https://d1z88p83zuviay.cloudfront.net/Images/barilla.jpg" alt="">
+        </div>
+        <h2>Online Grocery Store India</h2>
+        <p>Nature’s Basket is a grocery store operating in Mumbai, Bangalore and Pune with deliveries to all cities across India including Hyderabad, Delhi, Kolkata, Chennai, Surat and more. We offer a wide range of food products for all your everyday needs and even offer grocery home delivery as well as a grocery shop online for you to purchase from. Our online grocery store has fresh fruits and vegetables, fresh and frozen meats and seafood, a wide range of breads and other packaged bakery products as well as a range of fresh cheeses from around the world. We even have a range of every staple and international cuisine product to meet your needs along with organic products for fresh and packaged food items. With our offerings, we have the best online food shop & online grocery shopping platform available for all your grocery products as well as physical grocery stores in select cities.</p>
+        <h2>Best Online Grocery Supermarket India</h2>
+        <p>With stores in Mumbai, Pune and Bangalore and online delivery services, you can now have all your grocery supermarket shopping done online. We have a wide range of grocery products to offer at our stores for you to buy groceries from a channel convenient to you. Choose from fresh produce to packaged goods, buy groceries online and get them delivered straight to your doorstep, thus making it a convenient and quick process. You can pay for the shopping using credit cards, cash, coupons or online banking facility. We are sure to have all the grocery products for your daily dietary needs from regular local Indian brands and products to exotic and international imported ones.</p>
+        <div id="about">
+            
+            <div>
+                <h3>ABOUT US</h3>
+                <UL>
+                    <li>About Us</li>
+                    <li>Our Vision & Purpose</li>
+                    <li>Quality Standards</li>
+                    <li>Awards</li>
+                    <li>FAQs</li>
+                    <li>Available Delivery Slot</li>
+                    <li>Vendor Connect</li>
+                    
+                </UL>
+            </div>
+            <div>
+
+                <h3>NEWS& MEDIA</h3>
+                <ul>
+                    <li>Press releases</li>
+                    <li>Newsletters</li>
+                    <li>Events</li>
+                    <li>Photo gallery</li>
+                    <li>Recipies</li>
+                    <li>NBTV</li>
+                    <li>Our Virtual Store</li>
+                </ul>
+            </div>
+            <div>
+                <h3>OUR POLICIES</h3>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Payment Policy</li>
+                    <li>Disclaimer</li>
+                    <li>Staturory Comliance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer_cont">
+        <hr>
+        <div style="display: flex;">
+            <p style="padding-left:3%;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: 400;">Payment Method</p>
+            <img src="https://www.naturesbasket.co.in/Images/icons-card-payments-mode.png"/>
+            <p style="padding-left:27%;padding-right: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: 400;">Keep in Touch</p>
+            <div class = 'social_media_logos' style="margin-top: 10px;">
+                <i class="fab fa-facebook-f" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-twitter" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-youtube" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-instagram" style="padding-right:10px;font-size: 27px;"></i>
+                <i class="fab fa-pinterest" style="padding-right:10px;font-size: 27px;"></i>
+            </div> 
+            
+        </div>
+        <hr>
+        <div class="footer_items_info">
+            <div class="info">
+                <div>
+                    <h3>FRESH & FAST</h3>
+                    <br>
+                    <H3>GIFT HAMPERS</H3>
+                    <UL>
+                        <LI>Birthday & Anniversary Gift Hampers</LI>
+                        <li>World Cuisine Gift Hampers</li>
+                        <li>Organic & Health Gift Hampers</li>
+                        <li>Coffee & Tea Gift Hampers</li>
+                        <li>Get Well Soon Gift Hampers</li>
+                        <li>Cheese & Meat Platters</li>
+                    </UL>
+                    <h3>FRUITS & VEGITABLES</h3>
+                    <UL>
+                        <li>Vegetables</li>
+                        <li>Exotic Vegetables</li>
+                        <li>Fruits</li>
+                        <li>Organic Fruits & Vegetables</li>
+                        <li>Exotic Fruits</li>
+                        <li>Canned & Frozen</li>
+                        <li>Cold - Pressed Fresh Juices</li>
+                        
+                    </UL>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>WEIGHT MANAGEMENT FOODS</h3>
+                    <ul>
+                        <li>Dry Fruits, Muesli & Bran</li>
+                        <li>Flours & Grains</li>
+                        <li>Rice, Couscous & Quinoa</li>
+                        <li>Seafood</li>
+                        <li>Soups & Dressings</li>
+                        <li>Soya Snacks, Biscuits & More</li>
+                        <li>Supplements</li>
+                        <li>Tea & Beverages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>HEART-HEALTHY FOODS</h3>
+                    <ul>
+                        <li>Amaranth, Couscous & Quinoa</li>
+                        <li>Flours, Rice & Condiments</li>
+                        <li>Bread & Breakfast</li>
+                        <li>Butters & Oils</li>
+                        <li>Dry Fruits, Seeds & Powders</li>
+                        <li>Seafood & Lean Meats</li>
+                        <li>Snacks & Others</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>BREAKFAST & DAIRY</h3>
+                    <ul>
+                        <li>Cereals, Bars & Others</li>
+                        <li>Jams, Preserves & Conserves</li>
+                        <li>Honey</li>
+                        <li>Indian Breakfast Favourites</li>
+                        <li>Spreads</li>
+                        <li>Butters & Margarines</li>
+                        <li>Bakery</li>
+                    </ul>
+                     <!-- <br> -->
+                    <h3>INSTANT MEAL & AIDS</h3>
+                    <ul>
+                        <li>Ready to Cook</li>
+                        <li>Ready to Eat</li>
+                        <li>Accessories</li>
+                        <li>Books</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>SNACKS & BEVERAGES</h3>
+                    <UL>
+                        <li>Cookies & Crackers</li>
+                        <li>Frozen Snacks</li>
+                        <li>Antipasti</li>
+                        <li>Dry Snacks</li>
+                        <li>Fresh Snacks & Party Food</li>
+                        <li>Relishes & Pickels</li>
+                        <li>Carbonated Drinks</li>
+                        <li>Teas</li>
+                        <li>Water</li>
+                        <li>Concentrate</li>
+                        <li>Coffe</li>
+                        <li>Energy</li>
+                        <li>Dairy</li>
+                        <li>Juice</li>
+                    </UL>
+                </div>
+            </div>
+        </div>
+    <hr>
+        <p style="padding-left: 90px; font-family: Arial, Helvetica, sans-serif;font-size: 14px;letter-spacing: 1px;">© 2020 Natures Basket Limited.  All rights reserved.|Privacy Policy|Terms of Use|Home Delivery Number - 8880077745|Site Map|Mobile Site|FSSAI License Number - 11519002000496</p>
     </div>
 </body>
 </html>
+
 <script>
-    function fromAtoZ(){
-        console.log("am from a to z")
+    var clickedFruit = JSON.parse(localStorage.getItem("fruits")) || []
+      function clicked()
+    {
+      console.log(clickedFruit)
+        
+    //   for(var i = 0; i < clickedFruit.length; i++)
+    //   {
+        clickedFruit.map(function(item,index)
+        {
+        //   var image = document.getElementById("prod_img")
+        var cont = document.createElement("div")
+        cont.id = "cont";
+          var img_div = document.createElement("div")
+          img_div.id = "prodImg_div"
+          var image = document.createElement("img")
+          image.id = "prod_img"
+          image.src = item.image;
+          img_div.append(image)
+          
+          var price_div = document.createElement("div")
+          price_div.id = "prod_price"
+          var price = document.createElement("p")
+          price.textContent = `Rs.${item.price}`
+          price_div.append(price)
+
+          var name_div = document.createElement("div")
+          name_div.id ="prod_name"
+          var name= document.createElement("p")
+          name.textContent= item.name
+          name_div.append(name)
+          
+          var sub_total_div = document.createElement("div")
+          sub_total_div.id ="sub_total"
+          var subTotal = document.createElement("p")
+          subTotal.textContent= `Rs. ${item.price}`
+          sub_total_div.append(subTotal)
+
+          var dis_div = document.createElement("div")
+          var p = document.createElement("p")
+          p.textContent= "0.00"
+          dis_div.id = "prod_dis"
+          dis_div.append(p)
+
+          var qty_div = document.createElement("div")
+          var p1 = document.createElement("p")
+          p1.textContent = "1";
+          qty_div.id = "prod_qty"
+          qty_div.append(p1)
+
+          var btn_div = document.createElement("div")
+          var btn = document.createElement("button")
+          btn.id = "remove_btn"
+          btn.textContent ="X"
+          btn_div.append(btn)
+
+
+          btn.addEventListener("click",function(){
+                remove(index,btn)
+          });
+
+        // var dis_div = document.createElement("prod_dis")
+        // var qty_div = document.createElement("prod_qty")
+
+          cont.append(img_div,name_div,price_div,dis_div,qty_div,sub_total_div,btn_div)
+        //   cont.append(img_div,name_div,price_div,sub_total_div)
+
+          document.getElementById("cart_container").append(cont);
+        })
+
+
     }
-    function fromZtoA(){
-        console.log("am from z to a")
+    
+    // }
+    clicked()
+
+    function remove(index,btn)
+    {
+        console.log(index)
+        console.log(clickedFruit)
+        btn.style.backgroundColor="red"
+        clickedFruit.splice(index,1);
+        localStorage.setItem("fruits",JSON.stringify(clickedFruit))
+
     }
-    function lowToHigh(){
-        console.log("am from low to high")
+
+    function Total(items){
+      
+      items.map(function(elem){
+          console.log(elem)
+      })
+     }
+    
+  
+  
+   
+    var total = 0;
+    var sum = clickedFruit.forEach(item=>{
+        total += Number(item.price)
+       
+    })
+    console.log(total)
+    document.querySelector("#total").textContent="Grand total =  Rs. " +total    
+
+    document.querySelector("#promo").addEventListener("submit",discount)
+    function discount(event){
+    event.preventDefault();
+    var select = document.querySelector("#coupon").value
+
+    var dis = 0;
+    var saved = 0;
+    if(select == "user20"){
+       saved =(total*20)/100;
+       dis = total-saved ;
+       document.querySelector("#sav").textContent="Yay! You Saved =Rs. "+saved
+     document.querySelector("#dis").textContent="Total after Discount = Rs."+dis
     }
-    function highToLow(){
-        console.log("am from high to low")
-    }
+    else{document.querySelector("#sav").textContent="Wrong Promo Code"; }
+     console.log(saved,dis)
+ }
+ function delivery()
+ {
+     window.location.href ="deliveryDetails.html"
+ }
+
+
 </script>
