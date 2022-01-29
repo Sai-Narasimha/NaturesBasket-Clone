@@ -78,7 +78,7 @@ var emailMob = document.querySelector("#mobEmail").value;
 var passWord = document.querySelector("#password").value;
 for(i = 0; i < detail.length; i++)
 {
-  if((detail[i].Mail || detail[i].mobNum == emailMob)  && (detail[i].password == passWord))
+  if(((detail[i].Mail || detail[i].mobNum) == emailMob)  && (detail[i].password === passWord))
   {
     localStorage.setItem("currentUser",JSON.stringify(detail[i]))
     var bag = "detail";

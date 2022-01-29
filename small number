@@ -1,0 +1,15 @@
+var arr=[4,2,1,3,7];
+var count=0;
+var stack=[];
+for(var i=arr.length-1;i>=0;i--){
+    while(stack[stack.length-1]>=arr[i]){
+    stack.pop()
+}
+
+if(stack[stack.length-1]!==undefined) {
+    count++;
+  //  console.log(stack[stack.length-1])
+}
+stack.push(arr[i])
+}
+console.log(count)
